@@ -1,0 +1,47 @@
+body {
+  background-image: url(../img/login-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body.welcomepage {
+  background-image: url(../img/panoramic-shot-snow-covered-jagged-mountain-peaks-cloudy-blue-skies.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+nav {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  backdrop-filter: blur(50px);
+  box-shadow: 0 0 50px 8px #000000ad !important;
+  position: absolute;
+  z-index: 555;
+}
+section div {
+  min-width: 60% !important;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  backdrop-filter: blur(5px);
+  border-radius: 0.625rem;
+}
+.title {
+  font-family: sans-serif;
+  color: #17a2b8;
+}
+section div p a {
+  transition: color 0.5s;
+}
+section div p a:hover {
+  color: #17a2b8 !important;
+}
+.welcome-contan {
+  min-height: 80vh !important;
+}
+.welcome {
+  min-width: 60% !important;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  backdrop-filter: blur(5px);
+  border-radius: 0.625rem;
+}

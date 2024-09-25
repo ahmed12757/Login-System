@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Login</title>
+  </head>
+  <body data-bs-theme="dark">
+    <div class="overlay d-block">
+      <section
+        class="container d-flex justify-content-center align-items-center min-vh-100"
+      >
+        <!-- ^Sign up -->
+
+        <div class="p-5">
+          <p class="title h1 text-center mb-3">Smart Login System</p>
+          <form action="" class="">
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingName"
+                placeholder="name@example.com"
+                autocomplete="off"
+              />
+              <label for="floatingInput">Enter your name</label>
+              <p class="text-danger h6 mt-1 d-none">
+                you should start capetal leter "
+              </p>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="floatingEmail"
+                placeholder="name@example.com"
+                autocomplete="off"
+              />
+              <label for="floatingInput">Enter your email</label>
+              <p class="text-danger h6 mt-1 d-none">
+                please enter a correct email as "test@gmail.com "
+              </p>
+            </div>
+            <div class="form-floating">
+              <input
+                type="password"
+                class="form-control"
+                id="floatingPassword"
+                placeholder="Password"
+              />
+              <label for="floatingPassword">Password</label>
+              <p class="text-danger h6 mt-1 d-none">
+                please enter complex password as "gr3at@3wdsG"
+              </p>
+            </div>
+            <button
+              class="btn btn-outline-info mt-3 w-100"
+              type="button"
+              id="signUp"
+            >
+              Sign Up
+            </button>
+          </form>
+          <p class="text-danger text-center h6 mt-3 d-none">
+            All inputs is required
+          </p>
+          <p class="text-success text-center h6 mt-3 d-none">Success</p>
+          <p class="mt-2 mb-0 text-center">
+            You have an account?
+            <a href="#" class="text-light text-decoration-none ms-1" id="in"
+              >Signin</a
+            >
+          </p>
+        </div>
+
+        <!-- ^Login -->
+
+        <div class="p-5 d-none">
+          <p class="title h1 text-center mb-3">Smart Login System</p>
+          <form action="./welcomePage.html" class="">
+            <div class="form-floating mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="floatingEmailIn"
+                placeholder="name@example.com"
+                autocomplete="off"
+              />
+              <label for="floatingInput">Enter your email</label>
+            </div>
+            <div class="form-floating">
+              <input
+                type="password"
+                class="form-control"
+                id="floatingPasswordIn"
+                placeholder="Password"
+              />
+              <label for="floatingPassword">Password</label>
+            </div>
+            <button
+              class="btn btn-outline-info mt-3 w-100"
+              id="Login"
+              type="button"
+              hrer="./"
+            >
+              Login
+            </button>
+          </form>
+          <p class="text-danger text-center h6 mt-3 d-none">
+            All inputs is required
+          </p>
+          <p class="mt-2 mb-0 text-center">
+            Don’t have an account?
+            <a href="#" class="text-light text-decoration-none ms-1" id="up"
+              >Sign Up</a
+            >
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
