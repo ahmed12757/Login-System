@@ -12,6 +12,8 @@ var username = document.querySelector("#username");
 var index;
 // * add veriable
 var informationList = JSON.parse(localStorage.getItem("info")) || [];
+var emailList = JSON.parse(localStorage.getItem("email")) || [];
+var passwordList = JSON.parse(localStorage.getItem("password")) || [];
 var usernameget = JSON.parse(localStorage.getItem("user"));
 if (username) {
   username.innerHTML = usernameget;
@@ -87,7 +89,11 @@ signUpPtn.addEventListener("click", function () {
       password: PasswordInput.value,
     };
     informationList.push(information);
+    emailList.push(information.email);
+    passwordList.push(information.password);
     localStorage.setItem("info", JSON.stringify(informationList));
+    localStorage.setItem("email", JSON.stringify(emailList));
+    localStorage.setItem("password", JSON.stringify(passwordList));
     clearInput();
     NameInput.closest("form").nextElementSibling.classList.add("d-none");
     NameInput.closest(
@@ -111,15 +117,28 @@ LoginPtn.addEventListener("click", function () {
     validateallIn(emailInRegex, EmailInputIn) &&
     validateallIn(passwordInRegex, PasswordInputIn)
   ) {
-    for (var i = 0; i < informationList.length; i++) {
-      if (
-        informationList[i].email === EmailInputIn.value &&
-        informationList[i].password === PasswordInputIn.value
-      ) {
-        localStorage.setItem("user", JSON.stringify(informationList[i].name));
-        newpage();
-        clearInput();
-        display(i);
+    for (var i = 0; i < emailList.length; i++) {
+      if (emailList[i] === EmailInputIn.value) {
+        for (var j = i; j < passwordList.length; j++) {
+          if (passwordList[j] === PasswordInputIn.value) {
+            localStorage.setItem(
+              "user",
+              JSON.stringify(informationList[j].name)
+            );
+            newpage();
+            clearInput();
+            display(j);
+          } else if (passwordList[j] !== PasswordInputIn.value) {
+            if (j === passwordList.length - 1) {
+              alert("please inter correct password");
+              break;
+            }
+          }
+        }
+      } else if (passwordList[i] === PasswordInputIn.value) {
+        if (emailList[i] !== EmailInputIn.value) {
+          alert("please inter correct email");
+        }
       }
     }
 
